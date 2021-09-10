@@ -35,3 +35,8 @@ dim(penguins)
 plot(x=penguins$species,y=penguins$body_mass_g)
 ```
 
+```{r}
+data("penguins")
+plot(penguins$species, penguins$body_mass_g,data=penguins,ylab="Poids en gramme",xlab="Espèces")
+```
+
