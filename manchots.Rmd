@@ -25,3 +25,8 @@ On charge le package :
 library(palmerpenguins)
 ```
 
+```{r}
+data("penguins")
+plot(penguins$species, penguins$body_mass_g,data=penguins,ylab="Poids en gramme",xlab="Espèces")
+```
+
