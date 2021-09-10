@@ -23,5 +23,15 @@ On charge le package :
 
 ```{r load_package}
 library(palmerpenguins)
+
+```
+
+#Creation d'un graphique
+
+```{r}
+penguins
+str(penguins)
+dim(penguins)
+plot(x=penguins$species,y=penguins$body_mass_g)
 ```
 
