@@ -26,13 +26,13 @@ library(palmerpenguins)
 
 ```
 
-#Creation d'un graphique
+#Creation d'un graphique : box plot
 
 ```{r}
 penguins
 str(penguins)
 dim(penguins)
-plot(x=penguins$species,y=penguins$bflipper_length_mm)
+plot(x=penguins$sex,y=penguins$body_mass_g,type="h")
 ```
 
 ```{r}
