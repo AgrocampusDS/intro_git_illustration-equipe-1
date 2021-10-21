@@ -1,6 +1,6 @@
 ---
 title: "Etude sur les manchots"
-author: "MP Etienne et al"
+author: "MP Etienne, L. Bertrand, C.Giraud et C.Gougeon"
 date: "9/2/2021"
 output: html_document
 ---
@@ -11,11 +11,32 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Introduction 
 
-Le  [Dr. Kristen Gorman](https://www.uaf.edu/cfos/people/faculty/detail/kristen-gorman.php) et la [station Palmer en Antarctique](https://pal.lternet.edu/) sont membres  de a member of [ Long Term Ecological Research Network](https://lternet.edu/) et ont collectés un jeu de données portant sur 344 manchots appatenant à 3espèces différentes. Ces données sont disponibles dans le package [palmerpenguins](https://allisonhorst.github.io/palmerpenguins/). Ce package peut être installé à l'aide de la commande
+Le  [Dr. Kristen Gorman](https://www.uaf.edu/cfos/people/faculty/detail/kristen-gorman.php) et la [station Palmer en Antarctique](https://pal.lternet.edu/) sont membres de a member of [ Long Term Ecological Research Network](https://lternet.edu/) et ont collectes un jeu de donnees portant sur 344 manchots appatenant a 3especes differentes. Ces donnees sont disponibles dans le package [palmerpenguins](https://allisonhorst.github.io/palmerpenguins/). Ce package peut etre installe a l'aide de la commande
 
 ```{r install_package, eval = FALSE}
-install.packages('palmerpenguins)
+install.packages('palmerpenguins')
 ```
 
-L'objectif de cette classe est de proposer des représentations graphiques de ces données en collaborant à l'aide de l'outil git.
+L'objectif de cette classe est de proposer des representations graphiques de ces donnees en collaborant a l'aide de l'outil git.
+
+On charge le package :
+
+```{r load_package}
+library(palmerpenguins)
+
+```
+
+#Creation d'un graphique : box plot
+
+```{r}
+penguins
+str(penguins)
+dim(penguins)
+plot(x=penguins$sex,y=penguins$body_mass_g,type="h")
+```
+
+```{r}
+data("penguins")
+plot(penguins$species, penguins$body_mass_g,data=penguins,ylab="Poids en gramme",xlab="Especes")
+```
 
